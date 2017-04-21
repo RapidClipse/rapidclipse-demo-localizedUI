@@ -54,14 +54,14 @@
         <XdevLabel x:name="lbldescription" value="{$lbldescription.value}">
             <x:constraints gridx="1" gridy="5" weighty="0.0" weightx="0.1" />
         </XdevLabel>
-        <XdevTable x:name="table" x:entity="Customer">
+        <XdevTable x:name="table" immediate="false" x:entity="Customer">
             <x:entityProperties>
-                <entry type="String" property="customerid" />
-                <entry type="String" property="companyname" />
-                <entry type="String" property="contactname" />
-                <entry type="String" property="contacttitle" />
-                <entry type="String" property="address" />
-                <entry type="String" property="city" />
+                <entry type="String" property="customerid" caption="{$tableColumnID.caption}" />
+                <entry type="String" property="companyname" caption="{$tableColumnCompanyname.caption}" />
+                <entry type="String" property="contactname" caption="{$tableColumnContactname.caption}" />
+                <entry type="String" property="contacttitle" caption="{$tableColumnContacttitle.caption}" />
+                <entry type="String" property="address" caption="{$tableColumnAddress.caption}" />
+                <entry type="String" property="city" caption="{$tableColumnCity.caption}" />
             </x:entityProperties>
             <x:constraints gridx="1" gridy="6" weighty="0.1" weightx="0.1" width="100%" height="100%" />
             <x:typeArguments>

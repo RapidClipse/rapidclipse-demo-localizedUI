@@ -62,13 +62,16 @@ public class MainView extends XdevView {
 	 * @eventHandlerDelegate Do NOT delete, used by UI designer!
 	 */
 	private void btnLanguageEnglish_buttonClick(final Button.ClickEvent event) {
-
 		//Changes the language for the current session
 		UI.getCurrent().setLocale(Locale.ENGLISH);
 		//Save the current language to the current session
 		UI.getCurrent().getSession().setAttribute(Locale.class, Locale.ENGLISH);
 		//Navigates to the itself. Best way to refresh the UI
 		Navigation.to("").navigate();
+
+//		this.table.
+//		Locale.setDefault(Locale.ENGLISH);
+//		Navigation.to("").navigate();
 	}
 
 	/**
@@ -125,10 +128,20 @@ public class MainView extends XdevView {
 		this.btnShowMessage.setCaption(StringResourceUtils.optLocalizeString("{$btnMessage.caption}", this));
 		this.txtName.setCaption(StringResourceUtils.optLocalizeString("{$txtName.caption}", this));
 		this.lbldescription.setValue(StringResourceUtils.optLocalizeString("{$lbldescription.value}", this));
+		this.table.setImmediate(false);
 		this.table.setContainerDataSource(Customer.class);
 		this.table.setVisibleColumns(Customer_.customerid.getName(), Customer_.companyname.getName(),
 				Customer_.contactname.getName(), Customer_.contacttitle.getName(), Customer_.address.getName(),
 				Customer_.city.getName());
+		this.table.setColumnHeader("customerid", StringResourceUtils.optLocalizeString("{$tableColumnID.caption}", this));
+		this.table.setColumnHeader("companyname",
+				StringResourceUtils.optLocalizeString("{$tableColumnCompanyname.caption}", this));
+		this.table.setColumnHeader("contactname",
+				StringResourceUtils.optLocalizeString("{$tableColumnContactname.caption}", this));
+		this.table.setColumnHeader("contacttitle",
+				StringResourceUtils.optLocalizeString("{$tableColumnContacttitle.caption}", this));
+		this.table.setColumnHeader("address", StringResourceUtils.optLocalizeString("{$tableColumnAddress.caption}", this));
+		this.table.setColumnHeader("city", StringResourceUtils.optLocalizeString("{$tableColumnCity.caption}", this));
 		this.btnNext.setCaption(StringResourceUtils.optLocalizeString("{$btnNextPage.caption}", this));
 
 		this.btnLanguageGerman.setWidth(100, Unit.PERCENTAGE);

@@ -43,7 +43,6 @@ public class Customer implements java.io.Serializable {
 	public Customer() {
 	}
 
-	@Caption("{$tableColumnID.caption}")
 	@Id
 
 	@Column(name = "CUSTOMERID", unique = true, nullable = false, columnDefinition = "VARCHAR", length = 5)
@@ -55,7 +54,6 @@ public class Customer implements java.io.Serializable {
 		this.customerid = customerid;
 	}
 
-	@Caption("{$tableColumnCompanyname.caption}")
 	@Column(name = "COMPANYNAME", nullable = false, columnDefinition = "VARCHAR", length = 40)
 	public String getCompanyname() {
 		return this.companyname;
@@ -65,7 +63,6 @@ public class Customer implements java.io.Serializable {
 		this.companyname = companyname;
 	}
 
-	@Caption("{$tableColumnContactname.caption}")
 	@Column(name = "CONTACTNAME", columnDefinition = "VARCHAR", length = 30)
 	public String getContactname() {
 		return this.contactname;
@@ -75,7 +72,6 @@ public class Customer implements java.io.Serializable {
 		this.contactname = contactname;
 	}
 
-	@Caption("{$tableColumnContacttitle.caption}")
 	@Column(name = "CONTACTTITLE", columnDefinition = "VARCHAR", length = 30)
 	public String getContacttitle() {
 		return this.contacttitle;
@@ -85,7 +81,6 @@ public class Customer implements java.io.Serializable {
 		this.contacttitle = contacttitle;
 	}
 
-	@Caption("{$tableColumnAddress.caption}")
 	@Column(name = "ADDRESS", columnDefinition = "VARCHAR", length = 60)
 	public String getAddress() {
 		return this.address;
@@ -95,7 +90,6 @@ public class Customer implements java.io.Serializable {
 		this.address = address;
 	}
 
-	@Caption("{$tableColumnCity.caption}")
 	@Column(name = "CITY", columnDefinition = "VARCHAR", length = 15)
 	public String getCity() {
 		return this.city;
@@ -105,7 +99,6 @@ public class Customer implements java.io.Serializable {
 		this.city = city;
 	}
 
-	@Caption("{$tableColumnRegion.caption}")
 	@Column(name = "REGION", columnDefinition = "VARCHAR", length = 15)
 	public String getRegion() {
 		return this.region;
@@ -115,7 +108,6 @@ public class Customer implements java.io.Serializable {
 		this.region = region;
 	}
 
-	@Caption("{$tableColumnPostalcode.caption}")
 	@Column(name = "POSTALCODE", columnDefinition = "VARCHAR", length = 10)
 	public String getPostalcode() {
 		return this.postalcode;
@@ -125,7 +117,6 @@ public class Customer implements java.io.Serializable {
 		this.postalcode = postalcode;
 	}
 
-	@Caption("{$tableColumnCountry.caption}")
 	@Column(name = "COUNTRY", columnDefinition = "VARCHAR", length = 15)
 	public String getCountry() {
 		return this.country;
@@ -135,7 +126,6 @@ public class Customer implements java.io.Serializable {
 		this.country = country;
 	}
 
-	@Caption("{$tableColumnPhone.caption}")
 	@Column(name = "PHONE", columnDefinition = "VARCHAR", length = 24)
 	public String getPhone() {
 		return this.phone;
@@ -145,7 +135,6 @@ public class Customer implements java.io.Serializable {
 		this.phone = phone;
 	}
 
-	@Caption("{$tableColumnFax.caption}")
 	@Column(name = "FAX", columnDefinition = "VARCHAR", length = 24)
 	public String getFax() {
 		return this.fax;
@@ -155,7 +144,6 @@ public class Customer implements java.io.Serializable {
 		this.fax = fax;
 	}
 
-	@Caption("{$tableColumnOrders.caption}")
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "customer")
 	public Set<Order> getOrders() {
 		return this.orders;
