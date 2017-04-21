@@ -12,7 +12,7 @@ This demo project shows the handling of multiple languages within the UI. See fo
 1. Clone the GIT Reporsitory or use the import function of RapiClipse
 2. File -> Import -> RapidClipse -> Demo Projects -> "rapidclipse-demo-localizedUI"
 2. Maybe do some Maven updates to remove project errors 
-3. Start the Project
+3. Start the UI at "QuickLaunch"
 
 ### Important files
 
