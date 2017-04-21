@@ -26,8 +26,6 @@ or in the Code, there are some lines like the following
 this.btnLanguageGerman.setCaption(StringResourceUtils.optLocalizeString("{$btnLanguageGerman.caption}", this));
 ```
 This pattern is the basic indicator for the RapidClipse framework to get the real value from a resource file.
-###### 'Customer' -> Entity
-Even at the 'Customer' entity there are many captions based on this special pattern
 
 ##### Resource files 'Customer_de.properties' or 'MainView_de.properities'
 Some important informations about the ressource files:
