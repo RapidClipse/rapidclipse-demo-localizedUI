@@ -4,7 +4,7 @@ This demo project shows the handling of multiple languages within the UI. See fo
 1. How to localize normal UI elements like XdevButtons, XdevTextFields, XdevLabels
 2. How to localize XdevTableHeader or how to use localization in entities
 3. How to localize dynamic messages and notifications
-4. How to keep localization after klick on browser refresh
+4. How to keep localization after click on browser refresh
 5. The most common naming strategies and patterns
 6. The most common resource file structure
 
