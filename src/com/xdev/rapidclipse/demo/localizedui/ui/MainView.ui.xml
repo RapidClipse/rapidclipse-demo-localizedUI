@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<?xdevuiml version="1.0"?>
+<?template BROWSER_XGA?>
+<?import com.xdev.rapidclipse.demo.localizedui.entities.Customer?>
+<?import com.xdev.ui.XdevButton?>
+<?import com.xdev.ui.XdevGridLayout?>
+<?import com.xdev.ui.XdevHorizontalLayout?>
+<?import com.xdev.ui.XdevLabel?>
+<?import com.xdev.ui.XdevMenuBar?>
+<?import com.xdev.ui.XdevMenuBar.XdevMenuItem?>
+<?import com.xdev.ui.XdevTextField?>
+<?import com.xdev.ui.XdevView?>
+<?import com.xdev.ui.entitycomponent.table.XdevTable?>
+<?import java.lang.String?>
+<XdevView xmlns:x="http://xml.xdev-software.com/xdevuiml" x:name="MainView">
+    <x:constraints zpos="0" width="100%" height="100%" />
+    <XdevGridLayout x:name="gridLayout">
+        <x:constraints zpos="0" width="100%" height="100%" />
+        <XdevMenuBar x:name="menuBar">
+            <x:constraints gridx="1" gridy="1" weighty="0.0" weightx="0.1" width="100%" />
+            <XdevMenuItem x:name="menuItem" text="{$menuData.text}">
+                <XdevMenuItem x:name="menuItem7" text="{$menuOpen.text}" />
+            </XdevMenuItem>
+            <XdevMenuItem x:name="menuItem2" text="{$menuEdit.text}">
+                <XdevMenuItem x:name="menuItem4" text="{$menuSave.text}" />
+                <XdevMenuItem x:name="menuItem5" text="{$menuInsert.text}" />
+                <XdevMenuItem x:name="menuItem6" text="{$menuDelete.text}" />
+            </XdevMenuItem>
+            <XdevMenuItem x:name="menuItem3" text="{$menuSource.text}" />
+        </XdevMenuBar>
+        <XdevHorizontalLayout x:name="horizontalLayout" margin="">
+            <x:constraints gridx="1" gridy="2" weighty="0.0" weightx="0.1" width="100%" />
+            <XdevButton caption="{$btnLanguageGerman.caption}" x:name="btnLanguageGerman">
+                <x:constraints weightx="0.1" width="100%" />
+                <x:event>click.buttonClick</x:event>
+            </XdevButton>
+            <XdevButton caption="{$btnLanguageEnglish.caption}" x:name="btnLanguageEnglish">
+                <x:constraints weightx="0.1" width="100%" />
+                <x:event>click.buttonClick</x:event>
+            </XdevButton>
+        </XdevHorizontalLayout>
+        <XdevHorizontalLayout x:name="horizontalLayout2" margin="">
+            <x:constraints gridx="1" gridy="3" weighty="0.0" weightx="0.1" width="100%" />
+            <XdevButton caption="{$btnMessage.caption}" x:name="btnShowMessage">
+                <x:constraints weightx="0.1" width="50%" />
+                <x:event>click.buttonClick</x:event>
+            </XdevButton>
+        </XdevHorizontalLayout>
+        <XdevTextField columns="5" caption="{$txtName.caption}" x:name="txtName">
+            <x:constraints gridx="1" gridy="4" weighty="0.0" weightx="0.1" width="300px" />
+        </XdevTextField>
+        <XdevLabel x:name="lbldescription" value="{$lbldescription.value}">
+            <x:constraints gridx="1" gridy="5" weighty="0.0" weightx="0.1" />
+        </XdevLabel>
+        <XdevTable x:name="table" x:entity="Customer">
+            <x:entityProperties>
+                <entry type="String" property="customerid" />
+                <entry type="String" property="companyname" />
+                <entry type="String" property="contactname" />
+                <entry type="String" property="contacttitle" />
+                <entry type="String" property="address" />
+                <entry type="String" property="city" />
+            </x:entityProperties>
+            <x:constraints gridx="1" gridy="6" weighty="0.1" weightx="0.1" width="100%" height="100%" />
+            <x:typeArguments>
+                <typeArgument type="Customer" />
+            </x:typeArguments>
+        </XdevTable>
+        <XdevButton caption="{$btnNextPage.caption}" x:name="btnNext">
+            <x:constraints gridx="1" gridy="7" weighty="0.0" weightx="0.1" width="50%" alignment="TOP_CENTER" />
+            <x:event>click.buttonClick</x:event>
+        </XdevButton>
+    </XdevGridLayout>
+</XdevView>
+
