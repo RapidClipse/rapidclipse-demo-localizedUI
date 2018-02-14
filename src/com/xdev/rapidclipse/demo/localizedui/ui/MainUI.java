@@ -24,7 +24,6 @@ public class MainUI extends XdevUI {
 	 */
 	@Override
 	public void init(final VaadinRequest request) {
-		this.initUI();
 
 		// Check if the UI is available
 		if (UI.getCurrent() != null) {
@@ -32,6 +31,8 @@ public class MainUI extends XdevUI {
 			// session will be set again
 			UI.getCurrent().setLocale(UI.getCurrent().getSession().getAttribute(Locale.class));
 		}
+
+		this.initUI();
 	}
 
 	/*
